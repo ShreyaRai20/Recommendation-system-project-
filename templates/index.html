@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class = "container">
@@ -14,10 +14,11 @@
             <div class="inner-card">
                 <h2>Movie Name: </h2>
                 <input type="text" name="movie_name" placeholder="Movies Name" class="input">
-                <button class ="btn">Recommend movie</button>
+                <button type ="submit" class ="btn">Recommend movie</button>
             </div>
         </div>
         <div class="recommended-movie">
+            <h2>Recommended Movies for "{{ input_movie }}"</h2>
             <ul>
                 {% for movie in movies %}
                 <li>{{ movie }}</li>

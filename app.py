@@ -7,9 +7,9 @@ app.static_folder ='static'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',movies =[])
 
-@app.route('/recommendations', methods=['POST'])
+@app.route('/index', methods=['POST'])
 def recommendations():
     movie_name = request.form['movie_name']
     recommended_movies = get_recommendations(movie_name.title())
