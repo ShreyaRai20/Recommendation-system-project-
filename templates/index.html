@@ -1,30 +1,28 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Recommendation System</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <div class = "container">
+    <div class="container">
         <div class="card">
             <h1>Welcome to our Movie Recommendation System!</h1>
 
             <div class="inner-card">
                 <h2>Movie Name: </h2>
-                <input type="text" name="movie_name" placeholder="Movies Name" class="input">
-                <button type ="submit" class ="btn">Recommend movie</button>
+                <input type="text" id="movie_name" placeholder="Movies Name" class="input">
+                <button id="recommend_button" class="btn">Recommend movie</button>
             </div>
         </div>
-        <div class="recommended-movie">
-            <h2>Recommended Movies for "{{ input_movie }}"</h2>
-            <ul>
-                {% for movie in movies %}
-                <li>{{ movie }}</li>
-                {% endfor %}
-            </ul>
+        <div class="recommended-movie" id="recommended_movies">
+            <!-- Recommended movies will be displayed here -->
         </div>
     </div>
+
+    <script src ="static/script.js"></script>
 </body>
 </html>
