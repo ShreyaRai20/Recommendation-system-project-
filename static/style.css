@@ -27,6 +27,15 @@ body{
     align-items: center;
     text-align: center;
     flex-direction: column;
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
+#recommended_movies{
+    text-align: start;
+    font-size: 100px;
+
+
 }
 
 .inner-card{
